@@ -27,7 +27,7 @@ export default function Home() {
   const [dose, setDose] = useState("0");
   const totalLiquid = 2;
 const maxClicks = 60;
-const mlPerClick = totalLiquid / maxClicks;
+const mlPerClick = 0.01;
 
 const mgPerMl = selectedProduct.mg / totalLiquid;
 const mgPerClick = mgPerMl * mlPerClick;
