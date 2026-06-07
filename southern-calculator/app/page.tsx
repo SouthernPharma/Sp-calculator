@@ -133,8 +133,8 @@ onMouseOut={(e) => {
               <strong>{totalLiquid}ml</strong>
             </div>
             <div className="infoRow">
-              <span>Total Clicks</span>
-              <strong>{totalClicks}</strong>
+              <span>Max Clicks Per Dial</span>
+<strong>{maxClicks}</strong>
             </div>
             <div className="infoRow">
               <span>Mg Per Click</span>
