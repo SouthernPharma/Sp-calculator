@@ -26,10 +26,14 @@ export default function Home() {
   const [selectedProduct, setSelectedProduct] = useState(products["0"]);
   const [dose, setDose] = useState("0");
   const totalLiquid = 2;
-  const totalClicks = 60;
-  const mgPerClick = selectedProduct.mg / totalClicks;
-  const clicksRequired = Math.round(Number(dose) / mgPerClick);
-  const liquidVolume = (clicksRequired * 0.01).toFixed(2);
+const maxClicks = 60;
+const mlPerClick = totalLiquid / maxClicks;
+
+const mgPerMl = selectedProduct.mg / totalLiquid;
+const mgPerClick = mgPerMl * mlPerClick;
+
+const clicksRequired = Math.round(Number(dose) / mgPerClick);
+const liquidVolume = (clicksRequired * mlPerClick).toFixed(2);
   return (
   <>
 <div className="particles">
